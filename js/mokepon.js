@@ -1,5 +1,7 @@
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador=3
+let vidasEnemigo=3
 
 function iniciarJuego(){
     let botonMascotaJugador=document.getElementById("boton-mascota")
@@ -77,6 +79,9 @@ function ataqueAleatorioEnemigo(){
 }
 
 function combate(){
+    let spanVidasJugador=document.getElementById("vidas-jugador")
+    let spanVidasEnemigo=document.getElementById("vidas-enemigo")
+
     if(ataqueEnemigo==ataqueJugador){
         crearMensaje("EMPATE")
     }else if(ataqueJugador=="FUEGO" && ataqueEnemigo=="TIERRA"){
@@ -87,6 +92,8 @@ function combate(){
         crearMensaje("GANASTE")
     }else{
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML=vidasJugador
     }
 }
 
