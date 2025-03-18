@@ -86,14 +86,30 @@ function combate(){
         crearMensaje("EMPATE")
     }else if(ataqueJugador=="FUEGO" && ataqueEnemigo=="TIERRA"){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML=vidasEnemigo
     }else if(ataqueJugador=="AGUA" && ataqueEnemigo=="FUEGO"){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML=vidasEnemigo
     }else if(ataqueJugador=="TIERRA" && ataqueEnemigo=="AGUA"){
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML=vidasEnemigo
     }else{
         crearMensaje("PERDISTE")
         vidasJugador--
         spanVidasJugador.innerHTML=vidasJugador
+    }
+
+    revisarVidas()
+}
+
+function revisarVidas(){
+    if(vidasEnemigo==0){
+        alert("GANAMOS EL JUEGO :)")
+    }else if(vidasJugador==0){
+        alert("PERDIMOS EL JUEGO :´(")
     }
 }
 
