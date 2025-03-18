@@ -14,6 +14,9 @@ function iniciarJuego(){
     botonAgua.addEventListener("click", ataqueAgua)
     let botonTierra=document.getElementById("boton-tierra")
     botonTierra.addEventListener("click", ataqueTierra)
+
+    let botonReiniciar=document.getElementById("boton-reiniciar")
+    botonReiniciar.addEventListener("click", reiniciarJuego)
 }
 
 function seleccionarMascotaJugador(){
@@ -107,9 +110,9 @@ function combate(){
 
 function revisarVidas(){
     if(vidasEnemigo==0){
-        alert("GANAMOS EL JUEGO :)")
+        crearMensajeFinal("FElICITACIONES! Ganaste :) ");
     }else if(vidasJugador==0){
-        alert("PERDIMOS EL JUEGO :´(")
+        crearMensajeFinal("Lo siento, perdiste :c");
     }
 }
 
@@ -120,6 +123,19 @@ function crearMensaje(resultado){
     parrafo.innerHTML="Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + " "+ resultado
 
     sectionMensajes.appendChild(parrafo)
+}
+
+function crearMensajeFinal(resultadoFinal){
+    let sectionMensajes=document.getElementById("mensajes")
+
+    let parrafo=document.createElement("p")
+    parrafo.innerHTML=resultadoFinal
+
+    sectionMensajes.appendChild(parrafo)
+}
+
+function reiniciarJuego(){
+    location.reload()
 }
 
 function aleatorio(min, max){
