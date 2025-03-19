@@ -1,10 +1,14 @@
+/*  
+    Actualizado: Miercoles 19 de marzo de 2025 4:40 pm
+    Profe Andrés
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body{
     font-family: "Montserrat", sans-serif;
     background-color: #041562;
-    background-color: white;
 }
 
 #seleccionar-mascota{
