@@ -1,4 +1,4 @@
-/*  Actualizado: Miercoles 19 de marzo de 2025 4:40 pm
+/*  Actualizado: Miercoles 19 de marzo de 2025 5:50 pm
     Profe Andrés
 */
 
@@ -10,6 +10,9 @@ let vidasEnemigo=3
 function iniciarJuego(){
     let sectionSeleccionarAtaque=document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display="none"
+
+    let sectionReiniciar=document.getElementById("reiniciar")
+    sectionReiniciar.style.display="none"
 
     let botonMascotaJugador=document.getElementById("boton-mascota")
 
@@ -31,7 +34,7 @@ function seleccionarMascotaJugador(){
     sectionSeleccionarMascota.style.display="none"
 
     let sectionSeleccionarAtaque=document.getElementById("seleccionar-ataque")
-    sectionSeleccionarAtaque.style.display="block"
+    sectionSeleccionarAtaque.style.display="flex"
 
     let inputCharmander=document.getElementById("charmander")
     let inputBoulbasour=document.getElementById("boulbasour")
@@ -152,6 +155,9 @@ function crearMensajeFinal(resultadoFinal){
     botonAgua.disabled=true
     let botonTierra=document.getElementById("boton-tierra")
     botonTierra.disabled=true
+
+    let sectionReiniciar=document.getElementById("reiniciar")
+    sectionReiniciar.style.display="block"
 }
 
 function reiniciarJuego(){
